@@ -16,7 +16,7 @@ public class homeWebPage {
 	 
 	 //Constructor that will be automatically called as soon as the object of the class is created
 	 public homeWebPage(WebDriver driver) {
-	          this.driver = driver;
+		 this.driver = driver;
 	          
 	 }
 	 

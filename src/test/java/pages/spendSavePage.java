@@ -31,7 +31,6 @@ public class spendSavePage {
 	 }
 	 
 	 //Locator for spend Save Menu field
-//	 By getAspirtaionButton = By.linkText("Get Aspiration");
 	 By getAspirtaionButton = By.xpath("//button[text()='Get Aspiration']");
 	
 	 // Locator for aspiration popup close
@@ -43,7 +42,6 @@ public class spendSavePage {
 	 
 	 
 	//Locator for spend Save Menu field
-//	 By getAspirtaionPlusButton = By.linkText("Get Aspiration Plus");
 	 By getAspirtaionPlusButton = By.xpath("//button[text()='Get Aspiration Plus']");
 		
 	 
@@ -91,17 +89,8 @@ public class spendSavePage {
 		  WebDriverWait wait = new WebDriverWait(driver,30);
 		  WebElement getAspirtaionPopupEmailWait = wait.until(ExpectedConditions.visibilityOf(driver.findElement(getAspirtaionPopupEmail)));
 		  helper.asssertIfElementIspresent(getAspirtaionPopupEmailWait, "Aspiration Popup email box");
-//		  getAspirtaionPopupEmailWait.sendKeys("abcde@abcde.com");
 		  getAspirtaionPopupEmailWait.sendKeys(Keys.ESCAPE);
-//		  getAspirtaionPopupEmailWait.sendKeys(Keys.ENTER);
-//		  getAspirtaionPopupEmailWait.sendKeys(Keys.TAB);
-//		  getAspirtaionPopupEmailWait.sendKeys(Keys.ENTER);
-//		  Actions action = new Actions(driver);
-//		  action.sendKeys(getAspirtaionPopupEmailWait,Keys.TAB).build().perform();
-		  
-//		  WebElement closeButtonElement = driver.findElement(getAspirtaionButton);
-//		  action.moveToElement(closeButtonElement).click().perform();
-//		  closeButtonElement.click();
+
 		 
 	 }
 	 
@@ -126,18 +115,14 @@ public class spendSavePage {
 		 helper.asssertIfElementIspresent(getMonthlyPlanElement, "Aspiration Plus - Monthly plan");
 		 
 		 WebElement getYearlyPlanAmountElement = driver.findElement(getYearlyPlanAmount);
-//		 System.out.println(getYearlyPlanAmountElement.getText());
-//		 System.out.println(getYearlyPlanAmountElement.getAttribute("value"));
-		 
-		 Thread.sleep(2000);
+
 		 String getYearlyPlanAmountElementDouble = getYearlyPlanAmountElement.getText().replace("$", "");
 		 Assert.assertEquals(Double.parseDouble(getYearlyPlanAmountElementDouble),71.88,0);
 		 
 		 WebElement getMonthlyPlanAmountElement = driver.findElement(getMonthlyPlanAmount);
 		 String getMonthlyPlanAmountElementDouble = getMonthlyPlanAmountElement.getText().replace("$", "");
 		 Assert.assertEquals(Double.parseDouble(getMonthlyPlanAmountElementDouble),7.99,0);
-	 
-//		 driver.findElement(getAspirtaionPopupClose).click();
+
 	 }
 	 
 	 
