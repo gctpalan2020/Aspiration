@@ -1,6 +1,9 @@
 package helperPack;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.NoSuchElementException;
+import java.util.Properties;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -20,5 +23,15 @@ public class HelperClass {
 		
 		System.out.println(message);
 		return message;
+	}
+	
+	public String getStringValueFromPropFile(String property) throws IOException{
+		
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("global.properties");
+		prop.load(fis);
+		
+		return prop.getProperty(property);
+			
 	}
 }
